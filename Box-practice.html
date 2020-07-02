@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<!--Clickable boxes without float; Using flexbox instead-->
+<head>
+<style>
+    .bg1{
+        background-color: lightblue;        
+    }
+
+    .bg2 {
+        background-color: tan;
+    }
+
+    .fly:hover{
+        transform: scale(1.15);
+    }
+
+    .div_zero {
+        /* background: rgb(193, 235, 230); */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        color: black;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    .div_first {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* background-color: rgb(193, 235, 230); */
+        padding-top: 1cm;
+        
+    }
+
+    .div_second {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 2cm;    
+        padding-bottom: 2cm;
+        
+    }
+
+    .linktext {
+        color: black;
+        text-decoration: none;
+        display: block; 
+        padding: 7px;  /* whole surface clickable, even padding */
+        border-style: solid;
+        border-color: black; 
+        border-width: 3px;
+        box-shadow: 0 10px 20px gray;
+        width: 200px;
+        text-align: justify;
+        
+        /*THERE IS NO NEED FOR A CLASS THAT EDITS <p>, BECAUSE <a> IS APPLIED TO THE WHOLE PARAGRAPH, SO JUST EDIT THAT. */
+
+        /* height,width=100% needed when not enough words to cover whole box, ex. only 'dog' */
+    }
+
+    img {
+        width: 300px;
+        box-shadow: 0 10px 20px gray;
+        object-fit: cover;
+        height: 300px;
+        
+    }
+
+    .linkimg {
+        display: inline-block;
+        /* you have to set both height and width of the box (img) for the anchor to take that size */
+    }
+    
+</style>
+</head>
+
+<body>
+
+    <div class=div_zero>
+        <h1>BOX PRACTICE</h1>
+    </div>
+
+    <div class=div_first>
+
+        <div>
+        <p class='bg1 fly'><a class=linktext href=https://loremipsum.io/ target=_blank>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a></p>
+        </div>
+
+        <div>
+        <p class='bg2 fly'><a class=linktext href=https://en.wikipedia.org/wiki/Lynx target=_blank>Body colour varies from medium brown to goldish to beige-white, and is occasionally marked with dark brown spots, especially on the limbs. All species of lynx have white fur on their chests, bellies and on the insides of their legs, fur which is an extension of the chest and belly fur. The lynx's colouring, fur length and paw size vary according to the climate in their range. In the Southwestern United States, they are short-haired, dark in colour and their paws are smaller and less padded. As climates get colder and more northerly, lynx have progressively thicker fur, lighter colour, and their paws are larger and more padded to adapt to the snow. Their paws may be larger than a human hand or foot.</a></p>
+        </div>
+
+    </div>
+
+    <div class=div_second>
+        <a class=linkimg target=_blank href=https://en.wikipedia.org/wiki/Wolf><img class=fly src=https://upload.wikimedia.org/wikipedia/commons/5/5f/Kolm%C3%A5rden_Wolf.jpg></a>
+
+        <a class=linkimg target=_blank href=https://en.wikipedia.org/wiki/Bear><img class=fly src=https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg></a>
+
+        <a target=_blank href=https://en.wikipedia.org/wiki/Eagle><img class=fly src=https://upload.wikimedia.org/wikipedia/commons/1/19/%C3%81guila_calva.jpg></a>
+
+        <a target=_blank href=https://en.wikipedia.org/wiki/Elk><img class=fly src=https://upload.wikimedia.org/wikipedia/commons/5/55/Rocky_Mountain_Bull_Elk.jpg></a>
+
+    </div>
+
+
+    
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+# Box practice
+
+This was one of my first personal projects, while learning CSS. It was basically just a way to learn how to make boxes, shadows, pictures in boxes, flexbox and so on...
